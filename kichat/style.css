@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+a[href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"] {
+    display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #fff;
+  text-align: center;
+}
+
+.content {
+  width: 350px;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow:  12px 12px 61px #d1d1d1,
+              -12px -12px 61px #ffffff;
+}
+.content:hover{
+  box-shadow:  9px 9px 18px #dedede,
+              -9px -9px 18px #ffffff;
+}
+.content .text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #0c0c59cf;
+}
+
+form p {
+  color: #0c0c59cf;
+  font-size: 13px;
+}
+
+.field {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+
+.field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background: #fff;
+  color: #595959;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgb(249 246 246 / 71%);
+}
+
+.field input:focus {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.field span {
+  position: absolute;
+  color: #0c0c59cf;
+  width: 50px;
+  line-height: 50px;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 45px;
+  pointer-events: none;
+  color: #777777;
+}
+
+.field input:valid ~ label {
+  opacity: 0;
+}
+
+button {
+  margin: 50px 0;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #0c0c59cf;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1), -8px -8px 20px rgb(249 246 246 / 71%);
+}
+
+button:active {
+  color: #3498db;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.sign-up {
+  color: #595959;
+  font-size: 16px;
+}
+
+.sign-up a {
+  color: #0c0c59cf;
+  text-decoration: none;
+}
+
+.sign-up a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+a[href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"] {
+    display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+ 
+body {
+  background: #fff;
+}
+   
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #0c0c59cf;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgb(163 162 162 / 15%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h3 {
+  font-size: 33px;
+  font-weight: 600;
+  padding: 20px;
+  margin-left: 50px;
+}
+   
+header input {
+  color: #595959;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 10px;
+  width: 330px;
+  margin-right: 100px;
+  height: 40px;
+  text-align: center;
+  border-radius: 25px 0;
+  border: none;
+  outline: none;
+  background: #fff;
+  box-shadow: 0px 0px 6px rgba(212, 212, 212, 0.521);
+}
+   
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgb(163 162 162 / 21%);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+footer a {
+  text-decoration: none;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 6px rgb(153 156 175 / 52%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+   
+footer a i {
+  color: #0c0c59cf;
+  font-size: 15px;
+}
+footer .active{
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow:  4px 4px 4px #d1d1d1,
+              -4px -4px 4px #ffffff;
+}
+   
+.post-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 10% 0;
+}
+
+.old-post{
+  width: 70%;
+  text-align: center;
+  margin-top: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.old-post h4{
+  color: #0c0c59cf;
+  margin-top: 10px;
+}
+
+.old-post .card{
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+}
+
+.card .info{
+  display: flex;
+  padding: 10px;
+}
+
+.card .avatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #F9C97C, #A2E9C1);
+}
+
+.card .avatar #pf{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
+
+.info .name-and-date{
+  display: grid;
+  padding-left: 20px;
+} 
+
+.card .his-name{
+  font-weight: 600;
+  text-align: left;
+}
+
+.card .post-date{ 
+  color: #888;
+  font-size: 12px;
+  text-align: left;
+}
+
+.post-img-caption{
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 20px 75px;
+}
+
+.post-img-caption #post_img{
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.post-img-caption .caption{
+  text-align: left;
+  color: #888;
+  font-size: 14px;
+}
+
+.post-time {
+    font-size: 11px;
+    text-align: right;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 880px) {
+  .post-container {
+    margin: 15% 0;
+    display: grid;
+    gap: 40px;
+    place-items: center;
+  }
+  header h3 {
+    font-size: 27px;
+  }
+  header input {
+    width: 290px;
+    margin-right: 10%;
+  }
+  .old-post {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .post-container {
+    margin: 25% 0;
+  }
+  header input {
+    width: 140px;
+    margin-right: 15%;
+    font-size: 10px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  .old-post {
+    width: 100%;
+    height: 100%;
+  }
+  .post-img-caption{
+    padding: 0 10px 15px 10px;
+  }
+  .old-post .card {
+      width: 92%;
+  }
+}
+
+   
+   
+::-webkit-scrollbar {
+  width: 8px;
+}
+   
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin: 100px 0;
+}
+   
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  margin: 90px 0;
+}
+   
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

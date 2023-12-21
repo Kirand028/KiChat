@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+a[href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"] {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+body {
+    background: #fff;
+}
+   
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #0c0c59cf;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgb(163 162 162 / 15%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3 {
+    font-size: 33px;
+    font-weight: 600;
+    padding: 20px;
+    margin-left: 50px;
+}
+   
+header input {
+    color: #595959;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 10px;
+    width: 330px;
+    margin-right: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 25px 0;
+    border: none;
+    outline: none;
+    background: #fff;
+    box-shadow: 0px 0px 6px rgba(212, 212, 212, 0.521);
+}
+   
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgb(163 162 162 / 21%);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+footer a {
+    text-decoration: none;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 1px 1px 6px rgb(153 156 175 / 52%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+   
+footer a i {
+    color: #0c0c59cf;
+    font-size: 15px;
+}
+
+footer .active{
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  4px 4px 4px #d1d1d1,
+                -4px -4px 4px #ffffff;
+}
+
+.profile-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9.5% 0;
+    column-gap: 70px;
+}
+
+.card {
+    width: 90%;
+    height: 400px;
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 20px 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.card h3{
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.user-profile{
+    width: 30%;
+    height: 100%;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-details{
+    width: 70%;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.user-details .mes-log{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+.mes-log p{
+    width: 70%;
+    text-align: center;
+    color: #181e73cf;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mes-log a{
+    width: 25%;
+    border-radius: 7px;
+    text-align: center;
+    color:white;
+    height:80%;
+    font-size: 15px;
+    background: #084cdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.inputs{
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.update-button{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.input-container{
+    height: 60px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.input-container input, .input-container select{
+    width: 100%; 
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    color: #242424;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.input-container input:focus, .input-container select:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+  
+.input-container input:hover, .input-container select:hover{
+    outline: 1px solid lightgrey;
+}
+
+
+.input-container label{
+    width: 100%;
+    text-align: left;
+    color: #888;
+    font-size: 14px;
+}
+
+.update-button button{
+    border: none;
+    background: #084cdf;
+    padding: 10px 30px;  
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.avatar button{
+    border: none;
+    background: #084cdf;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.avatar button:hover{
+    padding: 8px 13px;
+    background: #0d45a5;
+}
+
+.update-button button:hover{
+    background: #0d45a5;
+    padding: 10px 28px;
+}
+
+.user-profile .avatar{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#file-input {
+    width : 110px;
+    color: #444;
+    cursor: pointer;
+}
+
+#file-input::file-selector-button {
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+  
+#file-input::file-selector-button:hover {
+    background: #0d45a5;
+}
+
+.user-profile h4{
+    margin-left: 8px;
+}
+
+.avatar p{
+    font-size: 10px;
+    margin-top: 13px;
+    font-weight: 600;
+    color: #0000002e;
+}
+
+
+@media screen and (max-width: 880px) {
+    .profile-container {
+      margin: 15% 0; 
+    }
+    header h3 {
+      font-size: 27px;
+    }
+    header input {
+      width: 290px;
+      margin-right: 10%;
+    }
+    .user-profile .avatar{
+        width: 100%;
+    }
+    .card{
+        display: grid;
+        place-items: center;
+        height: auto;
+    }
+    .card h3{
+        display:inline;
+    }
+    .user-details{
+        width: 92%;
+    }
+    .user-profile{
+        width: 92%;
+    }
+}
+  
+@media screen and (max-width: 580px) {
+    .profile-container {
+      margin: 25% 0;
+    }
+    header input {
+      width: 140px;
+      margin-right: 15%;
+      font-size: 10px;
+    }
+    header h3 {
+      font-size: 20px;
+    }
+    .user-profile .avatar{
+        width: 100%;
+    }
+    .card{
+        display: grid;
+        place-items: center;
+        height: auto;
+    }
+    .card h3{
+        display:inline;
+    }
+    .user-details{
+        width: 100%;
+    }
+    .user-profile{
+        width: 100%;
+    }
+    .avatar{
+        padding-top:20px;
+    }
+    .avatar p{
+        padding: 10px 0;
+    }
+    .user-details .mes-log{
+        padding: 0 3px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .card{
+        height: auto;
+    }
+    
+}
+     
+::-webkit-scrollbar {
+    width: 8px;
+}
+     
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin: 100px 0;
+}
+     
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    margin: 90px 0;
+}
+     
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+  

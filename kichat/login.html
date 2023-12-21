@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/solid.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="content">
+        <div class="text">login</div>
+        <form id="login-form">
+
+            <p class="error-message" id="errorMessage"></p>
+            <div class="field">
+                <input type="text" name="username" required oninput="validateInput(event)">
+                <span class="fas fa-user"></span>
+                <label>Username or Email</label>
+            </div>
+            <div class="field">
+                <input type="password" name="password" required oninput="validateInput(event)">
+                <span class="fas fa-lock"></span>
+                <label>Password</label>
+            </div>
+
+            <button type="submit">Sign in</button>
+            <div class="sign-up">
+                Not a member?
+                <a href="signup.html">signup now</a>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function validateInput(event) {
+            const input = event.target;
+            const value = input.value;
+            const sanitizedValue = value.replace(/[^!#$%^,_&*+=@.a-zA-Z0-9]/g, '');
+            input.value = sanitizedValue;
+        }
+
+        $(document).ready(function() {
+            $('#login-form').submit(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'login.php',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        var encodedEmailIndex = response.indexOf('success.'); // Find the index of 'success.'
+                        if (encodedEmailIndex !== -1) {
+                            var encodedEmail = response.substring(encodedEmailIndex + 8); // Get the encoded email
+                            var redirectUrl = 'profile_page/profile_page.php?user=' + encodedEmail;
+                            window.location.href = redirectUrl;
+                        } else {
+                            $('#errorMessage').html(response);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                        $('#errorMessage').html('Error occurred while signing in.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
