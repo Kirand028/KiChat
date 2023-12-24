@@ -87,6 +87,23 @@
                     $updateResult = $conn->query($updateQuery);
 
                     if ($updateResult) {
+
+		    // to update in chat, friend list, postings as well
+                    $up_qfriend1 = "update friend set follower_username='$u_username' where follower_username='$my_userName'";
+                    $up_qfriend2 = "update friend set followee_username='$u_username' where followee_username='$my_userName'";
+                    
+                    $up_qchat1 = "update kichat set outgoing_username='$u_username' where outgoing_username='$my_userName'";
+                    
+                    $up_qchat2 = "update kichat set incoming_username='$u_username' where incoming_username='$my_userName'";
+                    
+                    $up_qpost = "update kpost set username='$u_username' where username='$my_userName'";
+
+                    $conn->query($up_qfriend1);
+                    $conn->query($up_qfriend2);
+                    $conn->query($up_qchat1);
+                    $conn->query($up_qchat2);
+                    $conn->query($up_qpost);
+			    
                     $message = '<i class="fa fa-check-circle" style="color:green;"></i> Success, wait 5sec to reflect';
                     $encode_email = base64_encode($u_email);
                     echo '<script>setTimeout(function() { window.location.href = "profile_page.php?user=' . $encode_email . '"; }, 3000);</script>';
